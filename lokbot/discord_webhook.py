@@ -83,7 +83,7 @@ class DiscordWebhook:
         # Set color based on resource type
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
-            obj_type = f"**{obj_type}**"  # Make it bold
+            obj_type = f"```diff\n+ {obj_type}```"  # Make it red using Discord markdown
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
             obj_type = f"```fix\n{obj_type}```"  # Make it gold using Discord markdown
