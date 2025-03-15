@@ -40,12 +40,12 @@ class DiscordWebhook:
         """
         color = 0x00FF00 if status == "Available" else 0xFF0000  # Green for available, Red for occupied
 
-        # Add thumbnail image based on resource type
+        # Add thumbnail image based on resource type using Discord CDN
         thumbnail = None
         if "Crystal Mine" in obj_type:
-            thumbnail = "https://i.imgur.com/crystal_mine.png"  # Replace with actual crystal mine image URL
+            thumbnail = "https://cdn.discordapp.com/attachments/1234567890/crystal_mine.png" # Add your Discord attachment URL
         elif "Dragon Soul Cavern" in obj_type:
-            thumbnail = "https://i.imgur.com/dragon_soul.png"  # Replace with actual dragon soul image URL
+            thumbnail = "https://cdn.discordapp.com/attachments/1234567890/dragon_soul.png" # Add your Discord attachment URL
 
         embed = {
             "title":
