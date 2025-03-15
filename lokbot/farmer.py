@@ -867,6 +867,18 @@ Status - {status}{occupied_info}"""
                                     occupied_info.strip() if occupied_info else ""
                                 )
 
+                            # For level 3+ resources, send to dedicated webhook if configured
+                            if level >= 3 and config.get('discord', {}).get('level3plus_webhook_url'):
+                                level3plus_webhook = DiscordWebhook(config.get('discord', {}).get('level3plus_webhook_url'))
+                                level3plus_webhook.send_object_log(
+                                    f"{obj_type} (Level {level} {resource_name})", 
+                                    code, 
+                                    level, 
+                                    loc, 
+                                    status, 
+                                    occupied_info.strip() if occupied_info else ""
+                                )
+                                
                             # For level 2+ resources, send to dedicated webhook if configured
                             if level >= 2 and config.get('discord', {}).get('level2plus_webhook_url'):
                                 level2plus_webhook = DiscordWebhook(config.get('discord', {}).get('level2plus_webhook_url'))
