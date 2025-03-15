@@ -80,7 +80,15 @@ class DiscordWebhook:
         """
         Send all resources to a separate webhook regardless of type or level
         """
-        color = 0x3498DB  # Blue color for all resources
+        # Set color based on resource type
+        if "Crystal Mine" in obj_type:
+            color = 0xFF0000  # Crystal Red color
+            obj_type = f"**{obj_type}**"  # Make it bold
+        elif "Dragon Soul Cavern" in obj_type:
+            color = 0xFFD700  # Gold color
+            obj_type = f"**{obj_type}**"  # Make it bold
+        else:
+            color = 0x3498DB  # Default blue color
 
         embed = {
             "title":
