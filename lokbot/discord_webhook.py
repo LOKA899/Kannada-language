@@ -83,17 +83,16 @@ class DiscordWebhook:
         # Set color based on resource type
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
-            title = f"🔮 **Crystal Mine Found!**"
+            obj_type = f"**{obj_type}**"  # Make it bold
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
-            title = f"🐲 **Dragon Soul Cavern Found!**"
+            obj_type = f"**{obj_type}**"  # Make it bold
         else:
             color = 0x3498DB  # Default blue color
-            title = f"Resource Found"
 
         embed = {
-            "title": title,
-            "description": f"**Type:** {obj_type}",
+            "title":
+            f"Resource Found: {obj_type}",
             "color":
             color,
             "fields": [{
