@@ -39,8 +39,8 @@ class DiscordWebhook:
         Send formatted object log to Discord
         """
         # Custom server emojis
-        CRYSTAL_EMOJI = "<:crystal_mine:>"  # Crystal Mine custom emoji
-        DRAGON_EMOJI = "<:dragon_soul:>"   # Dragon Soul custom emoji
+        CRYSTAL_EMOJI = ":crystal_mine:"  # Crystal Mine custom emoji
+        DRAGON_EMOJI = ":dragon_soul:"   # Dragon Soul custom emoji
         DEFAULT_EMOJI = "🎯"  # Default resource emoji
 
         # Set color based on resource type
@@ -95,8 +95,8 @@ class DiscordWebhook:
         Send all resources to a separate webhook regardless of type or level
         """
         # Custom server emojis
-        CRYSTAL_EMOJI = "<:crystal_mine:>"  # Crystal Mine custom emoji
-        DRAGON_EMOJI = "<:dragon_soul:>"   # Dragon Soul custom emoji
+        CRYSTAL_EMOJI = ":crystal_mine:"  # Crystal Mine custom emoji
+        DRAGON_EMOJI = ":dragon_soul:"   # Dragon Soul custom emoji
         DEFAULT_EMOJI = "🎯"  # Default resource emoji
 
         # Set color based on resource type
