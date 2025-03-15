@@ -86,7 +86,7 @@ class DiscordWebhook:
             obj_type = f"**{obj_type}**"  # Make it bold
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
-            obj_type = f"**{obj_type}**"  # Make it bold
+            obj_type = f"```fix\n{obj_type}```"  # Make it gold using Discord markdown
         else:
             color = 0x3498DB  # Default blue color
 
