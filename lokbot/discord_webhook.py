@@ -38,17 +38,20 @@ class DiscordWebhook:
         """
         Send formatted object log to Discord
         """
-        # Set color based on resource type
+        # Set color based on status
+        if "Available" in status:
+            color = 0x00FF00  # Green color
+        else:
+            color = 0xFF0000  # Red color for occupied
+
+        # Set title and thumbnail based on type
         if "Crystal Mine" in obj_type:
-            color = 0xFF0000  # Crystal Red color
             title = "**Crystal Mine Found!**"
             thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496588614602752/crystal_mine.png"
         elif "Dragon Soul Cavern" in obj_type:
-            color = 0xFFD700  # Gold color
             title = "**Dragon Soul Cavern Found!**"
             thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496589139148810/dragon_soul.png"
         else:
-            color = 0x3498DB  # Default blue color
             title = "Resource Found"
 
         embed = {
@@ -94,17 +97,20 @@ class DiscordWebhook:
         """
         Send all resources to a separate webhook regardless of type or level
         """
-        # Set color based on resource type
+        # Set color based on status
+        if "Available" in status:
+            color = 0x00FF00  # Green color
+        else:
+            color = 0xFF0000  # Red color for occupied
+
+        # Set title and thumbnail based on type
         if "Crystal Mine" in obj_type:
-            color = 0xFF0000  # Crystal Red color
             title = "**Crystal Mine Found!**"
             thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496588614602752/crystal_mine.png"
         elif "Dragon Soul Cavern" in obj_type:
-            color = 0xFFD700  # Gold color
             title = "**Dragon Soul Cavern Found!**"
             thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496589139148810/dragon_soul.png"
         else:
-            color = 0x3498DB  # Default blue color
             title = "Resource Found"
 
         embed = {
