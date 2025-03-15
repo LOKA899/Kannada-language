@@ -40,21 +40,11 @@ class DiscordWebhook:
         """
         color = 0x00FF00 if status == "Available" else 0xFF0000  # Green for available, Red for occupied
 
-        # Add thumbnail image based on resource type using Discord CDN
-        thumbnail = None
-        if "Crystal Mine" in obj_type:
-            thumbnail = "https://cdn.discordapp.com/attachments/1234567890/crystal_mine.png"  # Add your Discord attachment URL
-        elif "Dragon Soul Cavern" in obj_type:
-            thumbnail = "https://cdn.discordapp.com/attachments/1234567890/dragon_soul.png"  # Add your Discord attachment URL
-
         embed = {
             "title":
             f"Found {obj_type}",
             "color":
             color,
-            "thumbnail": {
-                "url": thumbnail
-            } if thumbnail else None,
             "fields": [{
                 "name": "Code",
                 "value": str(code),
@@ -92,21 +82,11 @@ class DiscordWebhook:
         """
         color = 0x3498DB  # Blue color for all resources
 
-        # Add thumbnail image based on resource type
-        thumbnail = None
-        if "Crystal Mine" in obj_type:
-            thumbnail = "https://media.discordapp.net/attachments/1349663748339531837/1350496588614602752/crystal_mine.png?ex=67d6f375&is=67d5a1f5&hm=2e2fd6d231984a34589e1d474e095eafe39601065ac3647674b76323e0d38f6a&=&format=webp&quality=lossless"  # Replace with actual crystal mine image URL
-        elif "Dragon Soul Cavern" in obj_type:
-            thumbnail = "https://media.discordapp.net/attachments/1349663748339531837/1350496589139148810/dragon_soul.png?ex=67d6f375&is=67d5a1f5&hm=fa2b377d207bd5190e51fe0d8f31169b897c7b74de0de6e93901dc77877f6820&=&format=webp&quality=lossless"  # Replace with actual dragon soul image URL
-
         embed = {
             "title":
             f"Resource Found: {obj_type}",
             "color":
             color,
-            "thumbnail": {
-                "url": thumbnail
-            } if thumbnail else None,
             "fields": [{
                 "name": "Code",
                 "value": str(code),
