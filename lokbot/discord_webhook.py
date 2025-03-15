@@ -38,21 +38,16 @@ class DiscordWebhook:
         """
         Send formatted object log to Discord
         """
-        # Custom server emojis
-        CRYSTAL_EMOJI = ":crystal_mine:"  # Crystal Mine custom emoji
-        DRAGON_EMOJI = ":dragon_soul:"   # Dragon Soul custom emoji
-        DEFAULT_EMOJI = "🎯"  # Default resource emoji
-
         # Set color based on resource type
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
-            title = f"{CRYSTAL_EMOJI} **Crystal Mine Found!**"
+            title = "**Crystal Mine Found!**"
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
-            title = f"{DRAGON_EMOJI} **Dragon Soul Cavern Found!**"
+            title = "**Dragon Soul Cavern Found!**"
         else:
             color = 0x3498DB  # Default blue color
-            title = f"{DEFAULT_EMOJI} Resource Found"
+            title = "Resource Found"
 
         embed = {
             "title": title,
@@ -94,21 +89,16 @@ class DiscordWebhook:
         """
         Send all resources to a separate webhook regardless of type or level
         """
-        # Custom server emojis
-        CRYSTAL_EMOJI = ":crystal_mine:"  # Crystal Mine custom emoji
-        DRAGON_EMOJI = ":dragon_soul:"   # Dragon Soul custom emoji
-        DEFAULT_EMOJI = "🎯"  # Default resource emoji
-
         # Set color based on resource type
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
-            title = f"{CRYSTAL_EMOJI} **Crystal Mine Found!**"
+            title = "**Crystal Mine Found!**"
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
-            title = f"{DRAGON_EMOJI} **Dragon Soul Cavern Found!**"
+            title = "**Dragon Soul Cavern Found!**"
         else:
             color = 0x3498DB  # Default blue color
-            title = f"{DEFAULT_EMOJI} Resource Found"
+            title = "Resource Found"
 
         embed = {
             "title": title,
