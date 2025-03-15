@@ -42,9 +42,11 @@ class DiscordWebhook:
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
             title = "**Crystal Mine Found!**"
+            thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496588614602752/crystal_mine.png"
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
             title = "**Dragon Soul Cavern Found!**"
+            thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496589139148810/dragon_soul.png"
         else:
             color = 0x3498DB  # Default blue color
             title = "Resource Found"
@@ -54,6 +56,9 @@ class DiscordWebhook:
             "description": f"**Type:** {obj_type}",
             "color":
             color,
+            "thumbnail": {
+                "url": thumbnail_url
+            },
             "fields": [{
                 "name": "Code",
                 "value": str(code),
@@ -93,9 +98,11 @@ class DiscordWebhook:
         if "Crystal Mine" in obj_type:
             color = 0xFF0000  # Crystal Red color
             title = "**Crystal Mine Found!**"
+            thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496588614602752/crystal_mine.png"
         elif "Dragon Soul Cavern" in obj_type:
             color = 0xFFD700  # Gold color
             title = "**Dragon Soul Cavern Found!**"
+            thumbnail_url = "https://media.discordapp.net/attachments/1349663748339531837/1350496589139148810/dragon_soul.png"
         else:
             color = 0x3498DB  # Default blue color
             title = "Resource Found"
@@ -105,6 +112,9 @@ class DiscordWebhook:
             "description": f"**Type:** {obj_type}",
             "color":
             color,
+            "thumbnail": {
+                "url": thumbnail_url
+            },
             "fields": [{
                 "name": "Code",
                 "value": str(code),
