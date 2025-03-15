@@ -34,9 +34,17 @@ class DiscordWebhook:
         """
         color = 0x00FF00 if status == "Available" else 0xFF0000  # Green for available, Red for occupied
         
+        # Add thumbnail image based on resource type
+        thumbnail = None
+        if "Crystal Mine" in obj_type:
+            thumbnail = "https://i.imgur.com/crystal_mine.png"  # Replace with actual crystal mine image URL
+        elif "Dragon Soul Cavern" in obj_type:
+            thumbnail = "https://i.imgur.com/dragon_soul.png"  # Replace with actual dragon soul image URL
+            
         embed = {
             "title": f"Found {obj_type}",
             "color": color,
+            "thumbnail": {"url": thumbnail} if thumbnail else None,
             "fields": [
                 {"name": "Code", "value": str(code), "inline": True},
                 {"name": "Level", "value": str(level), "inline": True},
@@ -56,9 +64,17 @@ class DiscordWebhook:
         """
         color = 0x3498DB  # Blue color for all resources
         
+        # Add thumbnail image based on resource type
+        thumbnail = None
+        if "Crystal Mine" in obj_type:
+            thumbnail = "https://i.imgur.com/crystal_mine.png"  # Replace with actual crystal mine image URL
+        elif "Dragon Soul Cavern" in obj_type:
+            thumbnail = "https://i.imgur.com/dragon_soul.png"  # Replace with actual dragon soul image URL
+            
         embed = {
             "title": f"Resource Found: {obj_type}",
             "color": color,
+            "thumbnail": {"url": thumbnail} if thumbnail else None,
             "fields": [
                 {"name": "Code", "value": str(code), "inline": True},
                 {"name": "Level", "value": str(level), "inline": True},
